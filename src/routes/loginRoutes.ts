@@ -34,7 +34,7 @@ router.post('/login', (req: Request<{}, {}, HttpBody>, res: Response) => {
 
   if (email && password && email === 'bob' && password === 'hello') {
     req.session = { loggedIn: true }
-    res.redirect('/')
+    res.redirect('/protected')
   } else {
     res.status(422).send(`Email or password were not correct.`)
   }
