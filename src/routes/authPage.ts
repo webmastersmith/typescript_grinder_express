@@ -6,7 +6,7 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
     return
   }
   res.status(403)
-  res.send('Not permitted!')
+  res.send('Not permitted today!')
 }
 
 const authPage = Router()
